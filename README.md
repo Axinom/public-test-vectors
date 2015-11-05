@@ -24,8 +24,8 @@ A single-period multi-DRM presentation with all video and audio representations 
 
 [1080p manifest](http://media.axprod.net/TestVectors/v6-MultiDRM/Manifest_1080p.mpd)
 
-Adaptation set | Parametrs
-:--------------|:---------
+Adaptation set | Parameters
+:--------------|:----------
 Video          | 7x H264, up to 4K resolution at 6 Mbps
 Audio          | 3x AAC-LC at 128 kbps
 Text           | 5x WebVTT (segmented)
@@ -56,8 +56,8 @@ A single-period multi-DRM presentation with all video and audio representations 
 
 [1080p manifest](http://media.axprod.net/TestVectors/v6-MultiDRM-MultiKey/Manifest_1080p.mpd)
 
-Content type | Parametrs
--------------|----------
+Content type | Parameters
+-------------|-----------
 Video        | 7x H264, up to 4K resolution at 6 Mbps
 Audio        | 3x AAC-LC at 128 kbps
 Text         | 5x WebVTT (segmented)
@@ -93,8 +93,8 @@ A multi-period multi-DRM presentation with all video and audio representations e
 
 [1080p manifest](http://media.axprod.net/TestVectors/v6-MultiDRM-MultiKey-MultiPeriod/Manifest_1080p.mpd)
 
-Content type | Parametrs
--------------|----------
+Content type | Parameters
+-------------|-----------
 Video        | 7x H264, up to 4K resolution at 6 Mbps
 Audio        | 3x AAC-LC at 128 kbps
 Text         | 5x WebVTT (segmented)
@@ -141,8 +141,8 @@ This is a clear (no encryption) variant of the v6-* presentations, to provide so
 
 [1080p manifest](http://media.axprod.net/TestVectors/v6-Clear/Manifest_1080p.mpd)
 
-Adaptation set | Parametrs
-:--------------|:---------
+Adaptation set | Parameters
+:--------------|:----------
 Video          | 7x H264, up to 4K resolution at 6 Mbps
 Audio          | 3x AAC-LC at 128 kbps
 Text           | 5x WebVTT (segmented)

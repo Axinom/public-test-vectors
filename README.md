@@ -10,7 +10,7 @@ PlayReady license server URL: http://drm-playready-licensing.axtest.net/AcquireL
 
 Widevine license server URL: http://drm-widevine-licensing.axtest.net/AcquireLicense
 
-To receive a license, you must add the HTTP header `X-AxDRM-Message` to the license request, with the value being a constant unique to each test vector (provided below).
+To receive a license, you must add the HTTP header `X-AxDRM-Message` to the license request, with the value being a constant unique to each test vector (provided below). The license server will provide nonpersistent licenses for the relevant keys upon each license request.
 
 # HTTPS compatibility notice
 
@@ -23,6 +23,8 @@ A single-period multi-DRM presentation with all video and audio representations 
 [4K manifest](http://media.axprod.net/TestVectors/v6-MultiDRM/Manifest.mpd)
 
 [1080p manifest](http://media.axprod.net/TestVectors/v6-MultiDRM/Manifest_1080p.mpd)
+
+[Download presentation](http://media.axprod.net/TestVectors/v6-MultiDRM.7z)
 
 Adaptation set | Parameters
 :--------------|:----------
@@ -55,6 +57,8 @@ A single-period multi-DRM presentation with all video and audio representations 
 [4K manifest](http://media.axprod.net/TestVectors/v6-MultiDRM-MultiKey/Manifest.mpd)
 
 [1080p manifest](http://media.axprod.net/TestVectors/v6-MultiDRM-MultiKey/Manifest_1080p.mpd)
+
+[Download presentation](http://media.axprod.net/TestVectors/v6-MultiDRM-MultiKey.7z)
 
 Content type | Parameters
 -------------|-----------
@@ -89,9 +93,13 @@ The above value has been broken down into multiple lines for readability - remov
 
 A multi-period multi-DRM presentation with all video and audio representations encrypted, using a different key for every adaptation set and changing the encryption parameters for the different periods.
 
+The two periods are simply the same audiovisual content presented twice in succession while varying some of the encryption parameters between the periods.
+
 [4K manifest](http://media.axprod.net/TestVectors/v6-MultiDRM-MultiKey-MultiPeriod/Manifest.mpd)
 
 [1080p manifest](http://media.axprod.net/TestVectors/v6-MultiDRM-MultiKey-MultiPeriod/Manifest_1080p.mpd)
+
+[Download presentation](http://media.axprod.net/TestVectors/v6-MultiDRM-MultiKey-MultiPeriod.7z)
 
 Content type | Parameters
 -------------|-----------

@@ -143,11 +143,15 @@ The above value has been broken down into multiple lines for readability - remov
 
 # v6-Clear
 
-This is a clear (no encryption) variant of the v6-* presentations, to provide some comparison capability for diagnostics and debugging. The media data inside is equal to the variants that make use of DRM.
+This is a clear (no encryption) variant of the v6-MultiDRM-* presentations, to provide some comparison capability for diagnostics and debugging. The media data inside is equal to the variants that make use of DRM.
 
-[4K manifest](http://media.axprod.net/TestVectors/v6-Clear/Manifest.mpd)
+[Single-period 4K manifest](http://media.axprod.net/TestVectors/v6-Clear/Manifest.mpd)
 
-[1080p manifest](http://media.axprod.net/TestVectors/v6-Clear/Manifest_1080p.mpd)
+[Single-period 1080p manifest](http://media.axprod.net/TestVectors/v6-Clear/Manifest_1080p.mpd)
+
+[Multi-period 4K manifest](http://media.axprod.net/TestVectors/v6-Clear/MultiPeriod_Manifest.mpd)
+
+[Multi-period 1080p manifest](http://media.axprod.net/TestVectors/v6-Clear/MultiPeriod_Manifest_1080p.mpd)
 
 [Download presentation](http://media.axprod.net/TestVectors/v6-Clear.7z)
 

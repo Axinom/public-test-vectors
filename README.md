@@ -149,6 +149,8 @@ This is a clear (no encryption) variant of the v6-* presentations, to provide so
 
 [1080p manifest](http://media.axprod.net/TestVectors/v6-Clear/Manifest_1080p.mpd)
 
+[Download presentation](http://media.axprod.net/TestVectors/v6-Clear.7z)
+
 Adaptation set | Parameters
 :--------------|:----------
 Video          | 7x H264, up to 4K resolution at 6 Mbps

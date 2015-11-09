@@ -163,7 +163,7 @@ Text           | 5x WebVTT (segmented)
 
 # Credits
 
-Original content "Tears of Steel" by Blender Foundation (mango.blender.org)
+Original content "Tears of Steel" by [Blender Foundation](http://mango.blender.org).
 
 # Disclaimer
 

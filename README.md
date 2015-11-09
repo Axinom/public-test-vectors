@@ -10,7 +10,11 @@ PlayReady license server URL: http://drm-playready-licensing.axtest.net/AcquireL
 
 Widevine license server URL: http://drm-widevine-licensing.axtest.net/AcquireLicense
 
-To receive a license, you must add the HTTP header `X-AxDRM-Message` to the license request, with the value being a constant unique to each test vector (provided below). The license server will provide nonpersistent licenses for the relevant keys upon each license request.
+The license server will provide nonpersistent licenses for the relevant keys upon each license request. To receive a license, you must add the HTTP header `X-AxDRM-Message` to the license request, with the value being a constant unique to each test vector. Example of license request:
+
+    POST http://drm-widevine-licensing.axtest.net/AcquireLicense HTTP/1.1
+    Host: drm-widevine-licensing.axtest.net
+    X-AxDRM-Message: eyJ0eX...
 
 # HTTPS compatibility notice
 

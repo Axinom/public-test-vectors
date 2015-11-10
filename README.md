@@ -36,7 +36,7 @@ Video          | 7x H264, up to 4K resolution at 6 Mbps
 Audio          | 3x AAC-LC at 128 kbps
 Text           | 5x WebVTT (segmented)
 
-The content is encrpted according to CENC and contains PlayReady and Widevine metadata in both the manifest and the initialization segments, with the metadata in both locations being equivalent.
+The content is encrypted according to CENC and contains PlayReady and Widevine metadata in both the manifest and the initialization segments, with the metadata in both locations being equivalent.
 
 Adaptation set | Key ID                               | Content key
 :--------------|:-------------------------------------|:------------------------
@@ -70,7 +70,7 @@ Video        | 7x H264, up to 4K resolution at 6 Mbps
 Audio        | 3x AAC-LC at 128 kbps
 Text         | 5x WebVTT (segmented)
 
-The content is encrpted according to CENC and contains PlayReady and Widevine metadata in both the manifest and the initialization segments, with the metadata in both locations being equivalent.
+The content is encrypted according to CENC and contains PlayReady and Widevine metadata in both the manifest and the initialization segments, with the metadata in both locations being equivalent.
 
 Adaptation set | Key ID                               | Content key
 :--------------|:-------------------------------------|:------------------------
@@ -111,7 +111,7 @@ Video        | 7x H264, up to 4K resolution at 6 Mbps
 Audio        | 3x AAC-LC at 128 kbps
 Text         | 5x WebVTT (segmented)
 
-The content is encrpted according to CENC and contains PlayReady and Widevine metadata in both the manifest and the initialization segments, with the metadata in both locations being equivalent.
+The content is encrypted according to CENC and contains PlayReady and Widevine metadata in both the manifest and the initialization segments, with the metadata in both locations being equivalent.
 
 ## Period 1
 

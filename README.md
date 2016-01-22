@@ -54,6 +54,40 @@ ZDM0YjVhIn1dfX0.yF7PflOPv9qHnu3ZWJNZ12jgkqTabmwXbDWk_47tLNE
 
 The above value has been broken down into multiple lines for readability - remove the line breaks in actual use.
 
+# v6-MultiDRM-GenericEmePssh
+
+A single-period multi-DRM presentation with all video and audio representations encrypted using the same key. In addititon to DRM-techology specific signaling, this presentation includes [generic EME signaling for Common Encryption](https://w3c.github.io/encrypted-media/cenc-format.html#common-system) in both the manifest and the initialization segments.
+
+[4K manifest](http://media.axprod.net/TestVectors/v6-MultiDRM-GenericEmePssh/Manifest.mpd)
+
+[1080p manifest](http://media.axprod.net/TestVectors/v6-MultiDRM-GenericEmePssh/Manifest_1080p.mpd)
+
+[Download presentation](http://media.axprod.net/TestVectors/v6-MultiDRM-GenericEmePssh.7z)
+
+Adaptation set | Parameters
+:--------------|:----------
+Video          | 7x H264, up to 4K resolution at 6 Mbps
+Audio          | 3x AAC-LC at 128 kbps
+Text           | 5x WebVTT (segmented)
+
+The content is encrypted according to CENC and contains PlayReady, Widevine and generic EME metadata in both the manifest and the initialization segments, with the metadata in both locations being equivalent.
+
+Adaptation set | Key ID                               | Content key
+:--------------|:-------------------------------------|:------------------------
+Video          | 6e5a1d26-2757-47d7-8046-eaa5d1d34b5a | GX8m9XLIZNIzizrl0RTqnA==
+Audio (all)    | 6e5a1d26-2757-47d7-8046-eaa5d1d34b5a | GX8m9XLIZNIzizrl0RTqnA==
+
+Value to use for X-AxDRM-Message header:
+
+```
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5X2lkIjoiNjllNT
+QwODgtZTllMC00NTMwLThjMWEtMWViNmRjZDBkMTRlIiwibWVzc2FnZSI6eyJ0eXBlIjoiZW50aXRsZ
+W1lbnRfbWVzc2FnZSIsImtleXMiOlt7ImlkIjoiNmU1YTFkMjYtMjc1Ny00N2Q3LTgwNDYtZWFhNWQx
+ZDM0YjVhIn1dfX0.yF7PflOPv9qHnu3ZWJNZ12jgkqTabmwXbDWk_47tLNE
+```
+
+The above value has been broken down into multiple lines for readability - remove the line breaks in actual use.
+
 # v6-MultiDRM-MultiKey
 
 A single-period multi-DRM presentation with all video and audio representations encrypted, using a different key for every adaptation set.

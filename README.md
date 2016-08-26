@@ -16,188 +16,153 @@ The license server will provide nonpersistent licenses for the relevant keys upo
     Host: drm-widevine-licensing.axtest.net
     X-AxDRM-Message: eyJ0eX...
 
+# Customization of DRM behavior
+
+To customize the DRM parameters (e.g. license persistence/expiration or HDCP configuration) you must create your own license tokens instead of using the pre-generated ones provided below. Please refer to the [Axinom DRM Quick Start](https://github.com/Axinom/drm-quick-start) repository for more information on how to achieve this.
+
 # HTTPS compatibility notice
 
 All URLs in this document are also accessible over HTTPS.
 
-# v6-MultiDRM
+# v7-MultiDRM-SingleKey
 
-A single-period multi-DRM presentation with all video and audio representations encrypted using the same key.
+Single-period presentation using DASH live profile. All video and audio representations are encrypted using the same key. Text representations are not encrypted.
 
-[4K manifest](http://media.axprod.net/TestVectors/v6-MultiDRM/Manifest.mpd)
+[4K variant](http://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest.mpd)
 
-[1080p manifest](http://media.axprod.net/TestVectors/v6-MultiDRM/Manifest_1080p.mpd)
+[1080p variant](http://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_1080p.mpd)
 
-[Download presentation](http://media.axprod.net/TestVectors/v6-MultiDRM.7z)
+[Audio-only variant](http://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_AudioOnly.mpd)
 
-Adaptation set | Parameters
+[Download](http://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey.7z)
+
+Track          | Parameters
 :--------------|:----------
-Video          | 7x H264, up to 4K resolution at 6 Mbps
-Audio          | 3x AAC-LC at 128 kbps
-Text           | 5x WebVTT (segmented)
+Video          | 7x H.264 High Profile, 288p...2160p @ max 6 Mbps
+               | 7x H.265 Main 10 Profile, 288p...2160p @ max 4.5 Mbps
+Audio          | 3x HE-AACv2 at 128 kbps, stereo
+Text           | 5x WebVTT
+               | 5x IMSC 1.0 Text Profile
 
-The content is encrypted according to CENC and contains PlayReady and Widevine metadata in both the manifest and the initialization segments, with the metadata in both locations being equivalent.
+Samples are encrypted using the `cenc` encryption scheme. Manifest contains PlayReady and Widevine DRM system initialization data. Segments do not contain DRM system initialization data. Manifest does not contain any license server URLs.
 
 Adaptation set | Key ID                               | Content key
 :--------------|:-------------------------------------|:------------------------
-Video          | 6e5a1d26-2757-47d7-8046-eaa5d1d34b5a | GX8m9XLIZNIzizrl0RTqnA==
-Audio (all)    | 6e5a1d26-2757-47d7-8046-eaa5d1d34b5a | GX8m9XLIZNIzizrl0RTqnA==
+Video (all)    | 9eb4050d-e44b-4802-932e-27d75083e266 | FmY0xnWCPCNaSpRG+tUuTQ==
+Audio (all)    | 9eb4050d-e44b-4802-932e-27d75083e266 | FmY0xnWCPCNaSpRG+tUuTQ==
+Text (all)     | -                                    | -
 
-Value to use for X-AxDRM-Message header:
+Value to use for X-AxDRM-Message header: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5X2lkIjoiYjMzNjRlYjUtNTFmNi00YWUzLThjOTgtMzNjZWQ1ZTMxYzc4IiwibWVzc2FnZSI6eyJ0eXBlIjoiZW50aXRsZW1lbnRfbWVzc2FnZSIsImtleXMiOlt7ImlkIjoiOWViNDA1MGQtZTQ0Yi00ODAyLTkzMmUtMjdkNzUwODNlMjY2IiwiZW5jcnlwdGVkX2tleSI6ImxLM09qSExZVzI0Y3Iya3RSNzRmbnc9PSJ9XX19.4lWwW46k-oWcah8oN18LPj5OLS5ZU-_AQv7fe0JhNjA`
 
-```
-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5X2lkIjoiNjllNT
-QwODgtZTllMC00NTMwLThjMWEtMWViNmRjZDBkMTRlIiwibWVzc2FnZSI6eyJ0eXBlIjoiZW50aXRsZ
-W1lbnRfbWVzc2FnZSIsImtleXMiOlt7ImlkIjoiNmU1YTFkMjYtMjc1Ny00N2Q3LTgwNDYtZWFhNWQx
-ZDM0YjVhIn1dfX0.yF7PflOPv9qHnu3ZWJNZ12jgkqTabmwXbDWk_47tLNE
-```
+# v7-MultiDRM-MultiKey
 
-The above value has been broken down into multiple lines for readability - remove the line breaks in actual use.
+Single-period presentation using DASH live profile. Video and audio representations are encrypted using multiple keys. Text representations are not encrypted.
 
-# v6-MultiDRM-GenericEmePssh
+[4K variant](http://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey/Manifest.mpd)
 
-A single-period multi-DRM presentation with all video and audio representations encrypted using the same key. In addititon to DRM-techology specific signaling, this presentation includes [generic EME signaling for Common Encryption](https://w3c.github.io/encrypted-media/cenc-format.html#common-system) in both the manifest and the initialization segments.
+[1080p variant](http://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey/Manifest_1080p.mpd)
 
-[4K manifest](http://media.axprod.net/TestVectors/v6-MultiDRM-GenericEmePssh/Manifest.mpd)
+[Audio-only variant](http://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey/Manifest_AudioOnly.mpd)
 
-[1080p manifest](http://media.axprod.net/TestVectors/v6-MultiDRM-GenericEmePssh/Manifest_1080p.mpd)
+[Download](http://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey.7z)
 
-[Download presentation](http://media.axprod.net/TestVectors/v6-MultiDRM-GenericEmePssh.7z)
-
-Adaptation set | Parameters
+Track          | Parameters
 :--------------|:----------
-Video          | 7x H264, up to 4K resolution at 6 Mbps
-Audio          | 3x AAC-LC at 128 kbps
-Text           | 5x WebVTT (segmented)
+Video          | 7x H.264 High Profile, 288p...2160p @ max 6 Mbps
+               | 7x H.265 Main 10 Profile, 288p...2160p @ max 4.5 Mbps
+Audio          | 3x HE-AACv2 at 128 kbps, stereo
+Text           | 5x WebVTT
+               | 5x IMSC 1.0 Text Profile
 
-The content is encrypted according to CENC and contains PlayReady, Widevine and generic EME metadata in both the manifest and the initialization segments, with the metadata in both locations being equivalent.
+Samples are encrypted using the `cenc` encryption scheme. Manifest contains PlayReady and Widevine DRM system initialization data. Segments do not contain DRM system initialization data. Manifest does not contain any license server URLs.
 
-Adaptation set | Key ID                               | Content key
-:--------------|:-------------------------------------|:------------------------
-Video          | 6e5a1d26-2757-47d7-8046-eaa5d1d34b5a | GX8m9XLIZNIzizrl0RTqnA==
-Audio (all)    | 6e5a1d26-2757-47d7-8046-eaa5d1d34b5a | GX8m9XLIZNIzizrl0RTqnA==
+Adaptation set        | Key ID                               | Content key
+:---------------------|:-------------------------------------|:------------------------
+Video (288p...480p)   | 80399bf5-8a21-4014-8053-e27e748e98c0 | 3aHppzZ2g3Y3wK1uNnUXmg==
+Video (720p...1080p)  | 90953e09-6cb2-49a3-a260-7a5fefead499 | zsmKW7Mq9Unz5R7oUGeF8w==
+Video (1440p...2160p) | 0e4da92b-d0e8-4a66-8c3f-c25a97eb6532 | UmYYfGb7znuoFAQM79ayHw==
+Audio (en)            | 585f233f-3072-46f1-9fa4-6dc22c66a014 | jayKpC3tmPq4YKXkapa8FA==
+Audio (en-AU)         | 4222bd78-bc45-41bf-b63e-6f814dc391df | GAMi9v92b9ca5yBwaptN+Q==
+Audio (et-ET)         | -                                    | -
+Text (all)            | -                                    | -
 
-Value to use for X-AxDRM-Message header:
+Value to use for X-AxDRM-Message header: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5X2lkIjoiYjMzNjRlYjUtNTFmNi00YWUzLThjOTgtMzNjZWQ1ZTMxYzc4IiwibWVzc2FnZSI6eyJ0eXBlIjoiZW50aXRsZW1lbnRfbWVzc2FnZSIsImtleXMiOlt7ImlkIjoiODAzOTliZjUtOGEyMS00MDE0LTgwNTMtZTI3ZTc0OGU5OGMwIiwiZW5jcnlwdGVkX2tleSI6ImxpTkpxVmFZa05oK01LY3hKRms3SWc9PSJ9LHsiaWQiOiI5MDk1M2UwOS02Y2IyLTQ5YTMtYTI2MC03YTVmZWZlYWQ0OTkiLCJlbmNyeXB0ZWRfa2V5Ijoia1l0SEh2cnJmQ01lVmRKNkxrYmtuZz09In0seyJpZCI6IjBlNGRhOTJiLWQwZTgtNGE2Ni04YzNmLWMyNWE5N2ViNjUzMiIsImVuY3J5cHRlZF9rZXkiOiI3dzdOWkhITE1nSjRtUUtFSzVMVE1RPT0ifSx7ImlkIjoiNTg1ZjIzM2YtMzA3Mi00NmYxLTlmYTQtNmRjMjJjNjZhMDE0IiwiZW5jcnlwdGVkX2tleSI6IkFjNFVVbVl0Qko1blBROU4xNXJjM2c9PSJ9LHsiaWQiOiI0MjIyYmQ3OC1iYzQ1LTQxYmYtYjYzZS02ZjgxNGRjMzkxZGYiLCJlbmNyeXB0ZWRfa2V5IjoiTzZGTzBmcVNXb3BwN2JqYy9ENGxNQT09In1dfX0.uF6YlKAREOmbniAeYiH070HSJhV0YS7zSKjlCtiDR5Y`
 
-```
-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5X2lkIjoiNjllNT
-QwODgtZTllMC00NTMwLThjMWEtMWViNmRjZDBkMTRlIiwibWVzc2FnZSI6eyJ0eXBlIjoiZW50aXRsZ
-W1lbnRfbWVzc2FnZSIsImtleXMiOlt7ImlkIjoiNmU1YTFkMjYtMjc1Ny00N2Q3LTgwNDYtZWFhNWQx
-ZDM0YjVhIn1dfX0.yF7PflOPv9qHnu3ZWJNZ12jgkqTabmwXbDWk_47tLNE
-```
+# v7-MultiDRM-MultiKey-MultiPeriod
 
-The above value has been broken down into multiple lines for readability - remove the line breaks in actual use.
+Multi-period presentation using DASH live profile. Video and audio representations are encrypted using multiple keys, some of which change between periods. Text representations are not encrypted.
 
-# v6-MultiDRM-MultiKey
+The two periods contain the same content encrypted with different keys.
 
-A single-period multi-DRM presentation with all video and audio representations encrypted, using a different key for every adaptation set.
+[4K variant](http://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod/Manifest.mpd)
 
-[4K manifest](http://media.axprod.net/TestVectors/v6-MultiDRM-MultiKey/Manifest.mpd)
+[1080p variant](http://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod/Manifest_1080p.mpd)
 
-[1080p manifest](http://media.axprod.net/TestVectors/v6-MultiDRM-MultiKey/Manifest_1080p.mpd)
+[Audio-only variant](http://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod/Manifest_AudioOnly.mpd)
 
-[Download presentation](http://media.axprod.net/TestVectors/v6-MultiDRM-MultiKey.7z)
+[Download](http://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod.7z)
 
-Content type | Parameters
--------------|-----------
-Video        | 7x H264, up to 4K resolution at 6 Mbps
-Audio        | 3x AAC-LC at 128 kbps
-Text         | 5x WebVTT (segmented)
+Track          | Parameters
+:--------------|:----------
+Video          | 7x H.264 High Profile, 288p...2160p @ max 6 Mbps
+               | 7x H.265 Main 10 Profile, 288p...2160p @ max 4.5 Mbps
+Audio          | 3x HE-AACv2 at 128 kbps, stereo
+Text           | 5x WebVTT
+               | 5x IMSC 1.0 Text Profile
 
-The content is encrypted according to CENC and contains PlayReady and Widevine metadata in both the manifest and the initialization segments, with the metadata in both locations being equivalent.
-
-Adaptation set | Key ID                               | Content key
-:--------------|:-------------------------------------|:------------------------
-Video          | 1530d3a0-6904-446a-91a1-33a115aa8c41 | ubafkhpLoQF0nyvzzouLpg==
-Audio (en)     | c83eb639-e664-43f8-ae98-4039b0c13b2d | f5p7XvhuXKve9gx/v2pUsg==
-Audio (en-AU)  | 3d8cc762-27ac-400f-989f-8ab5dc7d7775 | cRc6/royDmsPA3zKGkQ81w==
-Audio (en-ET)  | bd8dad58-032d-4c25-89fa-c7b710e82ac2 | gDfgWVfz6O0Kq0+ZAV1miw==
-
-Value to use for X-AxDRM-Message header:
-
-```
-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5X2lkIjoiNjllNT
-QwODgtZTllMC00NTMwLThjMWEtMWViNmRjZDBkMTRlIiwibWVzc2FnZSI6eyJ0eXBlIjoiZW50aXRsZ
-W1lbnRfbWVzc2FnZSIsImtleXMiOlt7ImlkIjoiMTUzMGQzYTAtNjkwNC00NDZhLTkxYTEtMzNhMTE1
-YWE4YzQxIn0seyJpZCI6ImM4M2ViNjM5LWU2NjQtNDNmOC1hZTk4LTQwMzliMGMxM2IyZCJ9LHsiaWQ
-iOiIzZDhjYzc2Mi0yN2FjLTQwMGYtOTg5Zi04YWI1ZGM3ZDc3NzUifSx7ImlkIjoiYmQ4ZGFkNTgtMD
-MyZC00YzI1LTg5ZmEtYzdiNzEwZTgyYWMyIn1dfX0.9t18lFmZFVHMzpoZxYDyqOS0Bk_evGhTBw_F2
-JnAK2k
-```
-
-The above value has been broken down into multiple lines for readability - remove the line breaks in actual use.
-
-# v6-MultiDRM-MultiKey-MultiPeriod
-
-A multi-period multi-DRM presentation with all video and audio representations encrypted, using a different key for every adaptation set and changing the encryption parameters for the different periods.
-
-The two periods are simply the same audiovisual content presented twice in succession while varying some of the encryption parameters between the periods.
-
-[4K manifest](http://media.axprod.net/TestVectors/v6-MultiDRM-MultiKey-MultiPeriod/Manifest.mpd)
-
-[1080p manifest](http://media.axprod.net/TestVectors/v6-MultiDRM-MultiKey-MultiPeriod/Manifest_1080p.mpd)
-
-[Download presentation](http://media.axprod.net/TestVectors/v6-MultiDRM-MultiKey-MultiPeriod.7z)
-
-Content type | Parameters
--------------|-----------
-Video        | 7x H264, up to 4K resolution at 6 Mbps
-Audio        | 3x AAC-LC at 128 kbps
-Text         | 5x WebVTT (segmented)
-
-The content is encrypted according to CENC and contains PlayReady and Widevine metadata in both the manifest and the initialization segments, with the metadata in both locations being equivalent.
+Samples are encrypted using the `cenc` encryption scheme. Manifest contains PlayReady and Widevine DRM system initialization data. Segments do not contain DRM system initialization data. Manifest does not contain any license server URLs.
 
 ## Period 1
 
-Adaptation set | Key ID                               | Content key
-:--------------|:-------------------------------------|:------------------------
-Video          | 53be7757-7288-4b6b-b20a-f05b64a4ef79 | /34ZeGgb0eDY4M7FD12vcg==
-Audio (en)     | 0ed821a8-80ed-40ac-a804-927c9fdadbe9 | /6zlZEjHG0Ov698JfdL7aA==
-Audio (en-AU)  | -                                    | -
-Audio (en-ET)  | e47d78ca-94dc-45fb-9e3d-2a773aef74b2 | 3ZTeftObJfIHZeDvHAbarw==
+Adaptation set        | Key ID                               | Content key
+:---------------------|:-------------------------------------|:------------------------
+Video (288p...480p)   | 0872786e-f9e7-465f-a3a2-4e5b0ef8fa45 | wyYRebq2Hu7JedLUBpURzw==
+Video (720p...1080p)  | c14f0709-f2b9-4427-916b-61b52586506a | 7fsXeXJHs8enQ0SEfkhTBQ==
+Video (1440p...2160p) | 8b029e51-d56a-44bd-910f-d4b5fd90fba2 | yInMol6zCzsSjrg06k2k+g==
+Audio (en)            | 2d6e9387-60ca-4145-aec2-c40837b4b026 | QtC/8bYPe+SfF9YDSE0MuQ==
+Audio (en-AU)         | de02f07f-a098-4ee0-b556-907c0d17fbbc | GQnGyyKBez4x8aNTD6cNzw==
+Audio (et-ET)         | -                                    | - 
+Text (all)            | -                                    | -
 
 ## Period 2
 
-Adaptation set | Key ID                               | Content key
-:--------------|:-------------------------------------|:------------------------
-Video          | 32a141e9-23ab-44ff-a6c7-5349c89451cf | qtC6/ovJfAVxoQDFLh5knQ==
-Audio (en)     | -                                    | -
-Audio (en-AU)  | 8d091966-44b5-4cf8-8a45-ed12fdb18d35 | Da70PZt6XWYOdNDcJdqCBw==
-Audio (en-ET)  | e47d78ca-94dc-45fb-9e3d-2a773aef74b2 | 3ZTeftObJfIHZeDvHAbarw==
+Adaptation set        | Key ID                               | Content key
+:---------------------|:-------------------------------------|:------------------------
+Video (288p...480p)   | 0872786e-f9e7-465f-a3a2-4e5b0ef8fa45 | wyYRebq2Hu7JedLUBpURzw==
+Video (720p...1080p)  | 914e69f4-0ab3-4534-9e9f-9853615e26f6 | 0DBllUYESc5WdSJMebqlBA==
+Video (1440p...2160p) | da4445c2-db5e-48ef-b096-3ef347b16c7f | 0aUpR1ASGSQ1UGxWxY7ozA==
+Audio (en)            | 29f05e8f-a1ae-46e4-80e9-22dcd44cd7a1 | BxGxfISpDLtBCXJkyQG3Mg==
+Audio (en-AU)         | -                                    | -
+Audio (et-ET)         | 69fe7077-dadd-4b55-96cd-c3edb3991853 | 7TqCUJKmSlCbdIeJ0xbAgQ==
+Text (all)            | -                                    | -
 
-Value to use for X-AxDRM-Message header:
+Value to use for X-AxDRM-Message header: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5X2lkIjoiYjMzNjRlYjUtNTFmNi00YWUzLThjOTgtMzNjZWQ1ZTMxYzc4IiwibWVzc2FnZSI6eyJ0eXBlIjoiZW50aXRsZW1lbnRfbWVzc2FnZSIsImtleXMiOlt7ImlkIjoiMDg3Mjc4NmUtZjllNy00NjVmLWEzYTItNGU1YjBlZjhmYTQ1IiwiZW5jcnlwdGVkX2tleSI6IlB3NitlRVlOY3ZqWWJmc2gzWDNmbWc9PSJ9LHsiaWQiOiJjMTRmMDcwOS1mMmI5LTQ0MjctOTE2Yi02MWI1MjU4NjUwNmEiLCJlbmNyeXB0ZWRfa2V5IjoiLzErZk5paDM4bXFSdjR5Y1l6bnQvdz09In0seyJpZCI6IjhiMDI5ZTUxLWQ1NmEtNDRiZC05MTBmLWQ0YjVmZDkwZmJhMiIsImVuY3J5cHRlZF9rZXkiOiJrcTBKdVpFanBGTjhzYVRtdDU2ME9nPT0ifSx7ImlkIjoiMmQ2ZTkzODctNjBjYS00MTQ1LWFlYzItYzQwODM3YjRiMDI2IiwiZW5jcnlwdGVkX2tleSI6IlRjUlFlQld4RW9IT0tIcmFkNFNlVlE9PSJ9LHsiaWQiOiJkZTAyZjA3Zi1hMDk4LTRlZTAtYjU1Ni05MDdjMGQxN2ZiYmMiLCJlbmNyeXB0ZWRfa2V5IjoicG9lbmNTN0dnbWVHRmVvSjZQRUFUUT09In0seyJpZCI6IjkxNGU2OWY0LTBhYjMtNDUzNC05ZTlmLTk4NTM2MTVlMjZmNiIsImVuY3J5cHRlZF9rZXkiOiJlaUkvTXNsbHJRNHdDbFJUL0xObUNBPT0ifSx7ImlkIjoiZGE0NDQ1YzItZGI1ZS00OGVmLWIwOTYtM2VmMzQ3YjE2YzdmIiwiZW5jcnlwdGVkX2tleSI6IjJ3K3pkdnFycERWM3hSMGJKeTR1Z3c9PSJ9LHsiaWQiOiIyOWYwNWU4Zi1hMWFlLTQ2ZTQtODBlOS0yMmRjZDQ0Y2Q3YTEiLCJlbmNyeXB0ZWRfa2V5IjoiL3hsU0hweHdxdTNnby9nbHBtU2dhUT09In0seyJpZCI6IjY5ZmU3MDc3LWRhZGQtNGI1NS05NmNkLWMzZWRiMzk5MTg1MyIsImVuY3J5cHRlZF9rZXkiOiJ6dTZpdXpOMnBzaTBaU3hRaUFUa1JRPT0ifV19fQ.BXr93Et1krYMVs-CUnf7F3ywJWFRtxYdkR7Qn4w3-to`
 
-```
-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5X2lkIjoiNjllNT
-QwODgtZTllMC00NTMwLThjMWEtMWViNmRjZDBkMTRlIiwibWVzc2FnZSI6eyJ0eXBlIjoiZW50aXRsZ
-W1lbnRfbWVzc2FnZSIsImtleXMiOlt7ImlkIjoiNTNiZTc3NTctNzI4OC00YjZiLWIyMGEtZjA1YjY0
-YTRlZjc5In0seyJpZCI6IjBlZDgyMWE4LTgwZWQtNDBhYy1hODA0LTkyN2M5ZmRhZGJlOSJ9LHsiaWQ
-iOiJlNDdkNzhjYS05NGRjLTQ1ZmItOWUzZC0yYTc3M2FlZjc0YjIifSx7ImlkIjoiMzJhMTQxZTktMj
-NhYi00NGZmLWE2YzctNTM0OWM4OTQ1MWNmIn0seyJpZCI6IjhkMDkxOTY2LTQ0YjUtNGNmOC04YTQ1L
-WVkMTJmZGIxOGQzNSJ9XX19.9YSK6QsDr4SYR7Q74ftq9mVtsT0ZkP3STE0zI-3mVIA
-```
+# v7-Clear
 
-The above value has been broken down into multiple lines for readability - remove the line breaks in actual use.
+This is a clear (no encryption) variant of the above, to provide some comparison capability for diagnostics and debugging. The media samples inside are (binary) equal to the encrypted variants.
 
-# v6-Clear
+[Single-period 4K variant](http://media.axprod.net/TestVectors/v7-Clear/Manifest.mpd)
 
-This is a clear (no encryption) variant of the v6-MultiDRM-* presentations, to provide some comparison capability for diagnostics and debugging. The media data inside is equal to the variants that make use of DRM.
+[Single-period 1080p variant](http://media.axprod.net/TestVectors/v7-Clear/Manifest_1080p.mpd)
 
-[Single-period 4K manifest](http://media.axprod.net/TestVectors/v6-Clear/Manifest.mpd)
+[Single-period audio-only variant](http://media.axprod.net/TestVectors/v7-Clear/Manifest_AudioOnly.mpd)
 
-[Single-period 1080p manifest](http://media.axprod.net/TestVectors/v6-Clear/Manifest_1080p.mpd)
+[Multi-period 4K variant](http://media.axprod.net/TestVectors/v7-Clear/Manifest_MultiPeriod.mpd)
 
-[Multi-period 4K manifest](http://media.axprod.net/TestVectors/v6-Clear/MultiPeriod_Manifest.mpd)
+[Multi-period 1080p variant](http://media.axprod.net/TestVectors/v7-Clear/Manifest_MultiPeriod_1080p.mpd)
 
-[Multi-period 1080p manifest](http://media.axprod.net/TestVectors/v6-Clear/MultiPeriod_Manifest_1080p.mpd)
+[Multi-period audio-only variant](http://media.axprod.net/TestVectors/v7-Clear/Manifest_MultiPeriod_AudioOnly.mpd)
 
-[Download presentation](http://media.axprod.net/TestVectors/v6-Clear.7z)
+[Download](http://media.axprod.net/TestVectors/v7-Clear.7z)
 
-Adaptation set | Parameters
+Track          | Parameters
 :--------------|:----------
-Video          | 7x H264, up to 4K resolution at 6 Mbps
-Audio          | 3x AAC-LC at 128 kbps
-Text           | 5x WebVTT (segmented)
+Video          | 7x H.264 High Profile, 288p...2160p @ max 6 Mbps
+               | 7x H.265 Main 10 Profile, 288p...2160p @ max 4.5 Mbps
+Audio          | 3x HE-AACv2 at 128 kbps, stereo
+Text           | 5x WebVTT
+               | 5x IMSC 1.0 Text Profile
 
 # Credits
 

@@ -40,7 +40,7 @@ Track          | Parameters
 :--------------|:----------
 Video          | 7x H.264 High Profile, 288p...2160p @ max 6 Mbps
                | 7x H.265 Main 10 Profile, 288p...2160p @ max 4.5 Mbps
-Audio          | 3x HE-AACv2 at 128 kbps, stereo
+Audio          | 3x HE-AACv2 at 64 kbps, stereo
 Text           | 5x WebVTT
                | 5x IMSC 1.0 Text Profile
 
@@ -70,7 +70,7 @@ Track          | Parameters
 :--------------|:----------
 Video          | 7x H.264 High Profile, 288p...2160p @ max 6 Mbps
                | 7x H.265 Main 10 Profile, 288p...2160p @ max 4.5 Mbps
-Audio          | 3x HE-AACv2 at 128 kbps, stereo
+Audio          | 3x HE-AACv2 at 64 kbps, stereo
 Text           | 5x WebVTT
                | 5x IMSC 1.0 Text Profile
 
@@ -106,7 +106,7 @@ Track          | Parameters
 :--------------|:----------
 Video          | 7x H.264 High Profile, 288p...2160p @ max 6 Mbps
                | 7x H.265 Main 10 Profile, 288p...2160p @ max 4.5 Mbps
-Audio          | 3x HE-AACv2 at 128 kbps, stereo
+Audio          | 3x HE-AACv2 at 64 kbps, stereo
 Text           | 5x WebVTT
                | 5x IMSC 1.0 Text Profile
 
@@ -160,7 +160,7 @@ Track          | Parameters
 :--------------|:----------
 Video          | 7x H.264 High Profile, 288p...2160p @ max 6 Mbps
                | 7x H.265 Main 10 Profile, 288p...2160p @ max 4.5 Mbps
-Audio          | 3x HE-AACv2 at 128 kbps, stereo
+Audio          | 3x HE-AACv2 at 64 kbps, stereo
 Text           | 5x WebVTT
                | 5x IMSC 1.0 Text Profile
 

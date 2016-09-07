@@ -2,6 +2,10 @@
 
 This document lists the test vectors that Axinom offers for customers, partners and the general public.
 
+These test vectors make use of modern DASH features and conform to the latest industry standards, among these the *DASH-IF Interoperability Points* and the upcoming *ISO/IEC CD 23000-19 "Common Media Application Format"* (or its latest draft).
+
+As such, the scope of features utilized intentionally exceeds that seen with more traditional conservative test vectors - the below data is designed to push the boundaries of implementations and to encourage uptake of modern features. Please use the [conservative branch](https://github.com/Axinom/dash-test-vectors/tree/conservative) for a more widely-compatible (but less modern) version of the content.
+
 # Usage of Axinom DRM
 
 All test vectors can be played back using both the PlayReady and Widevine DRM technologies for decryption.

@@ -2,6 +2,8 @@
 
 This document lists the test vectors that Axinom offers for customers, partners and the general public.
 
+This is the conservative branch of the test vectors, intended to showcase highly compatible but not very modern data. Only use this branch if you do not wish to target the most modern features of industry standards.
+
 # Usage of Axinom DRM
 
 All test vectors can be played back using both the PlayReady and Widevine DRM technologies for decryption.

@@ -28,6 +28,14 @@ To customize the DRM parameters (e.g. license persistence/expiration or HDCP con
 
 All URLs in this document are also accessible over HTTPS.
 
+# Audio content description
+
+The audio tracks contain the same content but at a different pitch.
+
+* "en" language is the original audio.
+* "en-AU" language is the same content at a higher pitch.
+* "et-ET" language is the same content at a lower pitch.
+
 # v7-MultiDRM-SingleKey
 
 Single-period presentation using DASH live profile. All video and audio representations are encrypted using the same key. Text representations are not encrypted.

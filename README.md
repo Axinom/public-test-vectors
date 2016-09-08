@@ -22,6 +22,14 @@ The license server will provide nonpersistent licenses for the relevant keys upo
 
 All URLs in this document are also accessible over HTTPS.
 
+# Audio content description
+
+The audio tracks contain the same content but at a different pitch.
+
+* "en" language is the original audio.
+* "en-AU" language is the same content at a higher pitch.
+* "et-ET" language is the same content at a lower pitch.
+
 # v6.1-MultiDRM
 
 A single-period multi-DRM presentation with all video and audio representations encrypted using the same key.

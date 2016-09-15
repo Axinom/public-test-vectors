@@ -6,6 +6,13 @@ These test vectors make use of modern DASH features and conform to the latest in
 
 As such, the scope of features utilized intentionally exceeds that seen with more traditional conservative test vectors - the below data is designed to push the boundaries of implementations and to encourage uptake of modern features. Please use the [conservative branch](https://github.com/Axinom/dash-test-vectors/tree/conservative) for a more widely-compatible (but less modern) version of the content.
 
+# Quick playback in common players
+
+Most modern players include a demo application that enables you to easily play these test vectors:
+
+* [dash.js](https://github.com/Dash-Industry-Forum/dash.js/) includes these test vectors on the [demo page](http://mediapm.edgesuite.net/dash/public/nightly/samples/dash-if-reference-player/index.html).
+* The [ExoPlayer](https://github.com/google/ExoPlayer) demo app can load the [Axinom playlist](https://raw.githubusercontent.com/Axinom/dash-test-vectors/v7-exolist/axinom.exolist.json) (click this link on an Android device with ExoPlayer demo app installed; [more info](https://google.github.io/ExoPlayer/demo-application.html))
+
 # Usage of Axinom DRM
 
 All test vectors can be played back using both the PlayReady and Widevine DRM technologies for decryption.

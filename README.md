@@ -43,6 +43,10 @@ The audio tracks contain the same content but at a different pitch.
 * "en-AU" language is the same content at a higher pitch.
 * "et-ET" language is the same content at a lower pitch.
 
+# Content keys
+
+The content keys are listed below, individually for each test vector. You may also download a CPIX document that contains all content keys for all the test vectors defined here: [ContentKeys-v7.xml](ContentKeys-v7.xml). 
+
 # v7-MultiDRM-SingleKey
 
 Single-period presentation using DASH live profile. All video and audio representations are encrypted using the same key. Text representations are not encrypted.

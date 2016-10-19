@@ -30,6 +30,10 @@ The audio tracks contain the same content but at a different pitch.
 * "en-AU" language is the same content at a higher pitch.
 * "et-ET" language is the same content at a lower pitch.
 
+# Content keys
+
+The content keys are listed below, individually for each test vector. You may also download a CPIX document that contains all content keys for all the test vectors defined here: [ContentKeys-v6.1.xml](ContentKeys-v6.1.xml). 
+
 # v6.1-MultiDRM
 
 A single-period multi-DRM presentation with all video and audio representations encrypted using the same key.

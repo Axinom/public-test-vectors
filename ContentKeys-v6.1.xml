@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CPIX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:dashif:org:cpix" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:enc="http://www.w3.org/2001/04/xmlenc#" xmlns:pskc="urn:ietf:params:xml:ns:keyprov:pskc">
+	<ContentKeyList>
+		<ContentKey kid="6e5a1d26-2757-47d7-8046-eaa5d1d34b5a">
+			<Data>
+				<pskc:Secret>
+					<pskc:PlainValue>GX8m9XLIZNIzizrl0RTqnA==</pskc:PlainValue>
+				</pskc:Secret>
+			</Data>
+		</ContentKey>
+		<ContentKey kid="1530d3a0-6904-446a-91a1-33a115aa8c41">
+			<Data>
+				<pskc:Secret>
+					<pskc:PlainValue>ubafkhpLoQF0nyvzzouLpg==</pskc:PlainValue>
+				</pskc:Secret>
+			</Data>
+		</ContentKey>
+		<ContentKey kid="c83eb639-e664-43f8-ae98-4039b0c13b2d">
+			<Data>
+				<pskc:Secret>
+					<pskc:PlainValue>f5p7XvhuXKve9gx/v2pUsg==</pskc:PlainValue>
+				</pskc:Secret>
+			</Data>
+		</ContentKey>
+		<ContentKey kid="3d8cc762-27ac-400f-989f-8ab5dc7d7775">
+			<Data>
+				<pskc:Secret>
+					<pskc:PlainValue>cRc6/royDmsPA3zKGkQ81w==</pskc:PlainValue>
+				</pskc:Secret>
+			</Data>
+		</ContentKey>
+		<ContentKey kid="bd8dad58-032d-4c25-89fa-c7b710e82ac2">
+			<Data>
+				<pskc:Secret>
+					<pskc:PlainValue>gDfgWVfz6O0Kq0+ZAV1miw==</pskc:PlainValue>
+				</pskc:Secret>
+			</Data>
+		</ContentKey>
+		<ContentKey kid="53be7757-7288-4b6b-b20a-f05b64a4ef79">
+			<Data>
+				<pskc:Secret>
+					<pskc:PlainValue>/34ZeGgb0eDY4M7FD12vcg==</pskc:PlainValue>
+				</pskc:Secret>
+			</Data>
+		</ContentKey>
+		<ContentKey kid="0ed821a8-80ed-40ac-a804-927c9fdadbe9">
+			<Data>
+				<pskc:Secret>
+					<pskc:PlainValue>/6zlZEjHG0Ov698JfdL7aA==</pskc:PlainValue>
+				</pskc:Secret>
+			</Data>
+		</ContentKey>
+		<ContentKey kid="e47d78ca-94dc-45fb-9e3d-2a773aef74b2">
+			<Data>
+				<pskc:Secret>
+					<pskc:PlainValue>3ZTeftObJfIHZeDvHAbarw==</pskc:PlainValue>
+				</pskc:Secret>
+			</Data>
+		</ContentKey>
+		<ContentKey kid="32a141e9-23ab-44ff-a6c7-5349c89451cf">
+			<Data>
+				<pskc:Secret>
+					<pskc:PlainValue>qtC6/ovJfAVxoQDFLh5knQ==</pskc:PlainValue>
+				</pskc:Secret>
+			</Data>
+		</ContentKey>
+		<ContentKey kid="8d091966-44b5-4cf8-8a45-ed12fdb18d35">
+			<Data>
+				<pskc:Secret>
+					<pskc:PlainValue>Da70PZt6XWYOdNDcJdqCBw==</pskc:PlainValue>
+				</pskc:Secret>
+			</Data>
+		</ContentKey>
+	</ContentKeyList>
+</CPIX>

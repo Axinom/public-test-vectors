@@ -17,23 +17,19 @@ Most modern players include a demo application that enables you to easily play t
 
 All test vectors can be played back using both the PlayReady and Widevine DRM technologies for decryption.
 
-PlayReady license server URL: http://drm-playready-licensing.axtest.net/AcquireLicense
+PlayReady license server URL: https://drm-playready-licensing.axtest.net/AcquireLicense
 
-Widevine license server URL: http://drm-widevine-licensing.axtest.net/AcquireLicense
+Widevine license server URL: https://drm-widevine-licensing.axtest.net/AcquireLicense
 
 The license server will provide nonpersistent licenses for the relevant keys upon each license request. To receive a license, you must add the HTTP header `X-AxDRM-Message` to the license request, with the value being a constant unique to each test vector. Example of license request:
 
-    POST http://drm-widevine-licensing.axtest.net/AcquireLicense HTTP/1.1
+    POST https://drm-widevine-licensing.axtest.net/AcquireLicense HTTP/1.1
     Host: drm-widevine-licensing.axtest.net
     X-AxDRM-Message: eyJ0eX...
 
 # Customization of DRM behavior
 
 To customize the DRM parameters (e.g. license persistence/expiration or HDCP configuration) you must create your own license tokens instead of using the pre-generated ones provided below. Please refer to the [Axinom DRM Quick Start](https://github.com/Axinom/drm-quick-start) repository for more information on how to achieve this.
-
-# HTTPS compatibility notice
-
-All URLs in this document are also accessible over HTTPS.
 
 # Audio content description
 
@@ -51,13 +47,13 @@ The content keys are listed below, individually for each test vector. You may al
 
 Single-period presentation using DASH live profile. All video and audio representations are encrypted using the same key. Text representations are not encrypted.
 
-[4K variant](http://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest.mpd)
+[4K variant](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest.mpd)
 
-[1080p variant](http://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_1080p.mpd)
+[1080p variant](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_1080p.mpd)
 
-[Audio-only variant](http://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_AudioOnly.mpd)
+[Audio-only variant](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_AudioOnly.mpd)
 
-[Download](http://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey.7z)
+[Download](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey.7z)
 
 Track          | Parameters
 :--------------|:----------
@@ -81,13 +77,13 @@ Value to use for X-AxDRM-Message header: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e
 
 Single-period presentation using DASH live profile. Video and audio representations are encrypted using multiple keys. Text representations are not encrypted.
 
-[4K variant](http://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey/Manifest.mpd)
+[4K variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey/Manifest.mpd)
 
-[1080p variant](http://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey/Manifest_1080p.mpd)
+[1080p variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey/Manifest_1080p.mpd)
 
-[Audio-only variant](http://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey/Manifest_AudioOnly.mpd)
+[Audio-only variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey/Manifest_AudioOnly.mpd)
 
-[Download](http://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey.7z)
+[Download](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey.7z)
 
 Track          | Parameters
 :--------------|:----------
@@ -117,13 +113,13 @@ Multi-period presentation using DASH live profile. Video and audio representatio
 
 The two periods contain the same content encrypted with different keys.
 
-[4K variant](http://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod/Manifest.mpd)
+[4K variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod/Manifest.mpd)
 
-[1080p variant](http://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod/Manifest_1080p.mpd)
+[1080p variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod/Manifest_1080p.mpd)
 
-[Audio-only variant](http://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod/Manifest_AudioOnly.mpd)
+[Audio-only variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod/Manifest_AudioOnly.mpd)
 
-[Download](http://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod.7z)
+[Download](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod.7z)
 
 Track          | Parameters
 :--------------|:----------
@@ -165,19 +161,19 @@ Value to use for X-AxDRM-Message header: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e
 
 This is a clear (no encryption) variant of the above, to provide some comparison capability for diagnostics and debugging. The media samples inside are (binary) equal to the encrypted variants.
 
-[Single-period 4K variant](http://media.axprod.net/TestVectors/v7-Clear/Manifest.mpd)
+[Single-period 4K variant](https://media.axprod.net/TestVectors/v7-Clear/Manifest.mpd)
 
-[Single-period 1080p variant](http://media.axprod.net/TestVectors/v7-Clear/Manifest_1080p.mpd)
+[Single-period 1080p variant](https://media.axprod.net/TestVectors/v7-Clear/Manifest_1080p.mpd)
 
-[Single-period audio-only variant](http://media.axprod.net/TestVectors/v7-Clear/Manifest_AudioOnly.mpd)
+[Single-period audio-only variant](https://media.axprod.net/TestVectors/v7-Clear/Manifest_AudioOnly.mpd)
 
-[Multi-period 4K variant](http://media.axprod.net/TestVectors/v7-Clear/Manifest_MultiPeriod.mpd)
+[Multi-period 4K variant](https://media.axprod.net/TestVectors/v7-Clear/Manifest_MultiPeriod.mpd)
 
-[Multi-period 1080p variant](http://media.axprod.net/TestVectors/v7-Clear/Manifest_MultiPeriod_1080p.mpd)
+[Multi-period 1080p variant](https://media.axprod.net/TestVectors/v7-Clear/Manifest_MultiPeriod_1080p.mpd)
 
-[Multi-period audio-only variant](http://media.axprod.net/TestVectors/v7-Clear/Manifest_MultiPeriod_AudioOnly.mpd)
+[Multi-period audio-only variant](https://media.axprod.net/TestVectors/v7-Clear/Manifest_MultiPeriod_AudioOnly.mpd)
 
-[Download](http://media.axprod.net/TestVectors/v7-Clear.7z)
+[Download](https://media.axprod.net/TestVectors/v7-Clear.7z)
 
 Track          | Parameters
 :--------------|:----------
@@ -189,7 +185,7 @@ Text           | 5x WebVTT
 
 # Credits
 
-Original content "Tears of Steel" by [Blender Foundation](http://mango.blender.org).
+Original content "Tears of Steel" by [Blender Foundation](https://mango.blender.org).
 
 # Disclaimer
 

@@ -63,7 +63,7 @@ PlayReady and Widevine | W3C Clear Key
 [1080p variant](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_1080p.mpd) | [1080p variant](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_1080p_ClearKey.mpd)
 [Audio-only variant](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_AudioOnly.mpd) | [Audio-only variant](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_AudioOnly_ClearKey.mpd)
 
-[Download as archive](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey.7z)
+[Download as archive](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey-Update1.7z)
 
 Track          | Parameters
 :--------------|:----------
@@ -95,7 +95,7 @@ PlayReady and Widevine | W3C Clear Key
 [1080p variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey/Manifest_1080p.mpd) | [1080p variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey/Manifest_1080p_ClearKey.mpd)
 [Audio-only variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey/Manifest_AudioOnly.mpd) | [Audio-only variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey/Manifest_AudioOnly_ClearKey.mpd)
 
-[Download as archive](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey.7z)
+[Download as archive](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-Update1.7z)
 
 Track          | Parameters
 :--------------|:----------
@@ -133,7 +133,7 @@ PlayReady and Widevine | W3C Clear Key
 [1080p variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod/Manifest_1080p.mpd) | [1080p variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod/Manifest_1080p_ClearKey.mpd)
 [Audio-only variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod/Manifest_AudioOnly.mpd) | [Audio-only variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod/Manifest_AudioOnly_ClearKey.mpd)
 
-[Download as archive](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod.7z)
+[Download as archive](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod-Update1.7z)
 
 Track          | Parameters
 :--------------|:----------

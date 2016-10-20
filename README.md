@@ -21,11 +21,19 @@ PlayReady license server URL: https://drm-playready-licensing.axtest.net/Acquire
 
 Widevine license server URL: https://drm-widevine-licensing.axtest.net/AcquireLicense
 
-The license server will provide nonpersistent licenses for the relevant keys upon each license request. To receive a license, you must add the HTTP header `X-AxDRM-Message` to the license request, with the value being a constant unique to each test vector. Example of license request:
+Clear Key license server URL: https://drm-clearkey-testvectors.axtest.net/AcquireLicense
+
+The license server will provide nonpersistent licenses for the relevant keys upon each license request. To receive a PlayReady or Widevine license, you must add the HTTP header `X-AxDRM-Message` to the license request, with the value being a constant unique to each test vector. This HTTP header is not required in order to receive Clear Key licenses.
+
+Example of license request:
 
     POST https://drm-widevine-licensing.axtest.net/AcquireLicense HTTP/1.1
     Host: drm-widevine-licensing.axtest.net
     X-AxDRM-Message: eyJ0eX...
+
+# W3C Clear Key compatibility
+
+Clear Key variants of all the encrypted test vectors are provided separately and do not signal any other DRM system. This is because DASH-IF Interoperability Points forbid the mixed use of DRM systems and the Clear Key mechanism.
 
 # Customization of DRM behavior
 
@@ -47,13 +55,15 @@ The content keys are listed below, individually for each test vector. You may al
 
 Single-period presentation using DASH live profile. All video and audio representations are encrypted using the same key. Text representations are not encrypted.
 
-[4K variant](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest.mpd)
+Different variants of the test vector are provided in the form of different manifests that reference the same media segments. The manifests contain the license server URL for Clear Key but not for PlayReady or Widevine.
 
-[1080p variant](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_1080p.mpd)
+PlayReady and Widevine | W3C Clear Key
+:----------------------|:---------------
+[4K variant](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest.mpd) | [4K variant](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_ClearKey.mpd) 
+[1080p variant](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_1080p.mpd) | [1080p variant](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_1080p_ClearKey.mpd)
+[Audio-only variant](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_AudioOnly.mpd) | [Audio-only variant](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_AudioOnly_ClearKey.mpd)
 
-[Audio-only variant](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_AudioOnly.mpd)
-
-[Download](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey.7z)
+[Download as archive](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey.7z)
 
 Track          | Parameters
 :--------------|:----------
@@ -63,7 +73,7 @@ Audio          | 3x HE-AACv2 at 64 kbps, stereo
 Text           | 5x WebVTT
                | 5x IMSC 1.0 Text Profile
 
-Samples are encrypted using the `cenc` encryption scheme. Manifest contains PlayReady and Widevine DRM system initialization data. Segments do not contain DRM system initialization data. Manifest does not contain any license server URLs.
+Samples are encrypted using the `cenc` encryption scheme. All DRM system initialization and signaling data is in the manifest - the segments themselves only contain encryption-related data in a DRM-agnostic manner.
 
 Adaptation set | Key ID                               | Content key
 :--------------|:-------------------------------------|:------------------------
@@ -77,13 +87,15 @@ Value to use for X-AxDRM-Message header: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e
 
 Single-period presentation using DASH live profile. Video and audio representations are encrypted using multiple keys. Text representations are not encrypted.
 
-[4K variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey/Manifest.mpd)
+Different variants of the test vector are provided in the form of different manifests that reference the same media segments. The manifests contain the license server URL for Clear Key but not for PlayReady or Widevine.
 
-[1080p variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey/Manifest_1080p.mpd)
+PlayReady and Widevine | W3C Clear Key
+:----------------------|:---------------
+[4K variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey/Manifest.mpd) | [4K variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey/Manifest_ClearKey.mpd)
+[1080p variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey/Manifest_1080p.mpd) | [1080p variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey/Manifest_1080p_ClearKey.mpd)
+[Audio-only variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey/Manifest_AudioOnly.mpd) | [Audio-only variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey/Manifest_AudioOnly_ClearKey.mpd)
 
-[Audio-only variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey/Manifest_AudioOnly.mpd)
-
-[Download](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey.7z)
+[Download as archive](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey.7z)
 
 Track          | Parameters
 :--------------|:----------
@@ -93,7 +105,7 @@ Audio          | 3x HE-AACv2 at 64 kbps, stereo
 Text           | 5x WebVTT
                | 5x IMSC 1.0 Text Profile
 
-Samples are encrypted using the `cenc` encryption scheme. Manifest contains PlayReady and Widevine DRM system initialization data. Segments do not contain DRM system initialization data. Manifest does not contain any license server URLs.
+Samples are encrypted using the `cenc` encryption scheme. All DRM system initialization and signaling data is in the manifest - the segments themselves only contain encryption-related data in a DRM-agnostic manner.
 
 Adaptation set        | Key ID                               | Content key
 :---------------------|:-------------------------------------|:------------------------
@@ -113,13 +125,15 @@ Multi-period presentation using DASH live profile. Video and audio representatio
 
 The two periods contain the same content encrypted with different keys.
 
-[4K variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod/Manifest.mpd)
+Different variants of the test vector are provided in the form of different manifests that reference the same media segments. The manifests contain the license server URL for Clear Key but not for PlayReady or Widevine.
 
-[1080p variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod/Manifest_1080p.mpd)
+PlayReady and Widevine | W3C Clear Key
+:----------------------|:---------------
+[4K variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod/Manifest.mpd) | [4K variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod/Manifest_ClearKey.mpd)
+[1080p variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod/Manifest_1080p.mpd) | [1080p variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod/Manifest_1080p_ClearKey.mpd)
+[Audio-only variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod/Manifest_AudioOnly.mpd) | [Audio-only variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod/Manifest_AudioOnly_ClearKey.mpd)
 
-[Audio-only variant](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod/Manifest_AudioOnly.mpd)
-
-[Download](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod.7z)
+[Download as archive](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey-MultiPeriod.7z)
 
 Track          | Parameters
 :--------------|:----------
@@ -129,7 +143,7 @@ Audio          | 3x HE-AACv2 at 64 kbps, stereo
 Text           | 5x WebVTT
                | 5x IMSC 1.0 Text Profile
 
-Samples are encrypted using the `cenc` encryption scheme. Manifest contains PlayReady and Widevine DRM system initialization data. Segments do not contain DRM system initialization data. Manifest does not contain any license server URLs.
+Samples are encrypted using the `cenc` encryption scheme. All DRM system initialization and signaling data is in the manifest - the segments themselves only contain encryption-related data in a DRM-agnostic manner.
 
 ## Period 1
 
@@ -173,7 +187,7 @@ This is a clear (no encryption) variant of the above, to provide some comparison
 
 [Multi-period audio-only variant](https://media.axprod.net/TestVectors/v7-Clear/Manifest_MultiPeriod_AudioOnly.mpd)
 
-[Download](https://media.axprod.net/TestVectors/v7-Clear.7z)
+[Download as archive](https://media.axprod.net/TestVectors/v7-Clear.7z)
 
 Track          | Parameters
 :--------------|:----------

@@ -31,6 +31,10 @@ Example of license request:
     Host: drm-widevine-licensing.axtest.net
     X-AxDRM-Message: eyJ0eX...
 
+# PlayReady compatibility
+
+The rights management header version is 4.0.0.0, which is compatible with client applications implementing PlayReady version 2.0 or newer.
+
 # W3C Clear Key compatibility
 
 Clear Key variants of all the encrypted test vectors are provided separately and do not signal any other DRM system. This is because DASH-IF Interoperability Points forbid the mixed use of DRM systems and the Clear Key mechanism.

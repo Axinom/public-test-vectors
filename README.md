@@ -11,6 +11,7 @@ As such, the scope of features utilized intentionally exceeds that seen with mor
 Most modern players include a demo application that enables you to easily play these test vectors:
 
 * [dash.js](https://github.com/Dash-Industry-Forum/dash.js/) includes these test vectors on the [demo page](http://mediapm.edgesuite.net/dash/public/nightly/samples/dash-if-reference-player/index.html).
+* [Shaka Player](https://github.com/google/shaka-player) includes these test vectors on the [demo page](https://shaka-player-demo.appspot.com/).
 * The [ExoPlayer](https://github.com/google/ExoPlayer) demo app can load the [Axinom playlist](https://raw.githubusercontent.com/Axinom/dash-test-vectors/master/axinom.exolist.json) (click this link on an Android device with ExoPlayer demo app installed; [more info](https://google.github.io/ExoPlayer/demo-application.html))
 
 # Usage of Axinom DRM

@@ -16,7 +16,7 @@ Most modern players include a demo application that enables you to easily play t
 
 # Usage of Axinom DRM
 
-All test vectors can be played back using both the PlayReady and Widevine DRM technologies for decryption.
+All test vectors can be played back using both the PlayReady and Widevine DRM technologies for decryption. The [W3C Clear Key mechanism](https://www.w3.org/TR/encrypted-media/#clear-key) is also supported for key delivery.
 
 PlayReady license server URL: https://drm-playready-licensing.axtest.net/AcquireLicense
 

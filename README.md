@@ -73,10 +73,10 @@ PlayReady and Widevine | W3C Clear Key
 Track          | Parameters
 :--------------|:----------
 Video          | 7x H.264 High Profile, 288p...2160p @ max 6 Mbps
-               | 7x H.265 Main 10 Profile, 288p...2160p @ max 4.5 Mbps
+Video          | 7x H.265 Main 10 Profile, 288p...2160p @ max 4.5 Mbps
 Audio          | 3x HE-AACv2 at 64 kbps, stereo
 Text           | 5x WebVTT
-               | 5x IMSC 1.0 Text Profile
+Text           | 5x IMSC 1.0 Text Profile
 
 Samples are encrypted using the `cenc` encryption scheme. All DRM system initialization and signaling data is in the manifest - the segments themselves only contain encryption-related data in a DRM-agnostic manner.
 
@@ -105,10 +105,10 @@ PlayReady and Widevine | W3C Clear Key
 Track          | Parameters
 :--------------|:----------
 Video          | 7x H.264 High Profile, 288p...2160p @ max 6 Mbps
-               | 7x H.265 Main 10 Profile, 288p...2160p @ max 4.5 Mbps
+Video          | 7x H.265 Main 10 Profile, 288p...2160p @ max 4.5 Mbps
 Audio          | 3x HE-AACv2 at 64 kbps, stereo
 Text           | 5x WebVTT
-               | 5x IMSC 1.0 Text Profile
+Text           | 5x IMSC 1.0 Text Profile
 
 Samples are encrypted using the `cenc` encryption scheme. All DRM system initialization and signaling data is in the manifest - the segments themselves only contain encryption-related data in a DRM-agnostic manner.
 
@@ -143,10 +143,10 @@ PlayReady and Widevine | W3C Clear Key
 Track          | Parameters
 :--------------|:----------
 Video          | 7x H.264 High Profile, 288p...2160p @ max 6 Mbps
-               | 7x H.265 Main 10 Profile, 288p...2160p @ max 4.5 Mbps
+Video          | 7x H.265 Main 10 Profile, 288p...2160p @ max 4.5 Mbps
 Audio          | 3x HE-AACv2 at 64 kbps, stereo
 Text           | 5x WebVTT
-               | 5x IMSC 1.0 Text Profile
+Text           | 5x IMSC 1.0 Text Profile
 
 Samples are encrypted using the `cenc` encryption scheme. All DRM system initialization and signaling data is in the manifest - the segments themselves only contain encryption-related data in a DRM-agnostic manner.
 
@@ -197,10 +197,10 @@ This is a clear (no encryption) variant of the above, to provide some comparison
 Track          | Parameters
 :--------------|:----------
 Video          | 7x H.264 High Profile, 288p...2160p @ max 6 Mbps
-               | 7x H.265 Main 10 Profile, 288p...2160p @ max 4.5 Mbps
+Video          | 7x H.265 Main 10 Profile, 288p...2160p @ max 4.5 Mbps
 Audio          | 3x HE-AACv2 at 64 kbps, stereo
 Text           | 5x WebVTT
-               | 5x IMSC 1.0 Text Profile
+Text           | 5x IMSC 1.0 Text Profile
 
 # Credits
 

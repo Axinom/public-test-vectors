@@ -10,7 +10,7 @@ As such, the scope of features utilized intentionally exceeds that seen with mor
 
 Most modern players include a demo application that enables you to easily play these test vectors:
 
-* [dash.js](https://github.com/Dash-Industry-Forum/dash.js/) includes these test vectors on the [demo page](http://mediapm.edgesuite.net/dash/public/nightly/samples/dash-if-reference-player/index.html).
+* [dash.js](https://github.com/Dash-Industry-Forum/dash.js/) includes these test vectors on the [demo page](https://reference.dashif.org/dash.js/nightly/samples/dash-if-reference-player/index.html).
 * [Shaka Player](https://github.com/google/shaka-player) includes these test vectors on the [demo page](https://shaka-player-demo.appspot.com/).
 * The [ExoPlayer](https://github.com/google/ExoPlayer) demo app can load the [Axinom playlist](https://raw.githubusercontent.com/Axinom/dash-test-vectors/master/axinom.exolist.json) (click this link on an Android device with ExoPlayer demo app installed; [more info](https://google.github.io/ExoPlayer/demo-application.html))
 
@@ -54,7 +54,7 @@ The audio tracks contain the same content but at a different pitch.
 
 # Content keys
 
-The content keys are listed below, individually for each test vector. You may also download a CPIX document that contains all content keys for all the test vectors defined here: [ContentKeys-v7.xml](ContentKeys-v7.xml). 
+The content keys are listed below, individually for each test vector. You may also download a CPIX document that contains all content keys for all the test vectors defined here: [ContentKeys-v7.xml](ContentKeys-v7.xml).
 
 # v7-MultiDRM-SingleKey
 
@@ -64,7 +64,7 @@ Different variants of the test vector are provided in the form of different mani
 
 PlayReady and Widevine | W3C Clear Key
 :----------------------|:---------------
-[4K variant](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest.mpd) | [4K variant](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_ClearKey.mpd) 
+[4K variant](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest.mpd) | [4K variant](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_ClearKey.mpd)
 [1080p variant](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_1080p.mpd) | [1080p variant](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_1080p_ClearKey.mpd)
 [Audio-only variant](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_AudioOnly.mpd) | [Audio-only variant](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_AudioOnly_ClearKey.mpd)
 
@@ -159,7 +159,7 @@ Video (720p...1080p)  | c14f0709-f2b9-4427-916b-61b52586506a | 7fsXeXJHs8enQ0SEf
 Video (1440p...2160p) | 8b029e51-d56a-44bd-910f-d4b5fd90fba2 | yInMol6zCzsSjrg06k2k+g==
 Audio (en)            | 2d6e9387-60ca-4145-aec2-c40837b4b026 | QtC/8bYPe+SfF9YDSE0MuQ==
 Audio (en-AU)         | de02f07f-a098-4ee0-b556-907c0d17fbbc | GQnGyyKBez4x8aNTD6cNzw==
-Audio (et-ET)         | -                                    | - 
+Audio (et-ET)         | -                                    | -
 Text (all)            | -                                    | -
 
 ## Period 2

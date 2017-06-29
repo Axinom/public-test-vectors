@@ -221,11 +221,11 @@ Text           | 5x IMSC 1.0 Text Profile
 
 # v8-MultiContent
 
-This is a multi-period presentation using DASH live profile. The content in each period is markedly different from preceding and following periods, with changes occurring in the available set of audio and test languages, content keys, quality levels and video aspect ratio.
+This is a multi-period presentation using DASH live profile. The content in each period is markedly different from preceding and following periods, with changes occurring in the available set of audio and text languages, content keys, quality levels and video aspect ratio.
 
 This test vector is intended to simulate a recorded live stream that delivers different types of content in sequence (e.g. movies with different aspect ratios and language availability, interspersed with advertisements).
 
-Each period is encrypted with up to 4 different keys: an audio key, an SD video key, an HD video key and an UHD video key. PlayReady and Widevine DRM signaling is present.
+Each period is encrypted with up to 4 different keys: an audio key, an SD video key, an HD video key and an UHD video key. PlayReady and Widevine DRM signaling is present. A clear variant with no encryption is also available.
 
 Encrypted | Clear
 :---------------|--------------

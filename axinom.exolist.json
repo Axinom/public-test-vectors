@@ -1,8 +1,16 @@
 [
   {
     "_comment": "Source: https://github.com/Axinom/dash-test-vectors",
-    "name": "Axinom DASH test vectors",
+    "name": "Axinom test vectors",
     "samples": [
+      {
+        "name": "Live-Clear DASH",
+        "uri": "https://akamai-axtest.akamaized.net/routes/lapd-v1-acceptance/www_c4/Manifest.mpd"
+      },
+      {
+        "name": "Live-Clear HLS",
+        "uri": "https://akamai-axtest.akamaized.net/routes/lapd-v1-acceptance/www_c4/Manifest.m3u8"
+      },
       {
         "name": "v7-Clear single-period 4K",
         "uri": "https://media.axprod.net/TestVectors/v7-Clear/Manifest.mpd"

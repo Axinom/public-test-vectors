@@ -52,13 +52,14 @@ The audio tracks of the "v7" test vectors contain the same content but at a diff
 * "en-AU" language is the same content at a higher pitch.
 * "et-ET" language is the same content at a lower pitch.
 
-The audio tracks of the "v8" test vectors have more descriptive language codes (e.g. `en-x-high` for high-pitched English audio).
+The audio tracks of the "v8" and "v9" test vectors have more descriptive language codes (e.g. `en-x-high` for high-pitched English audio).
 
 # Content keys
 
-The content keys for the v7 test vectors are listed below, individually for each test vector. You may also download a CPIX document that contains all v7 test vector content keys:
+The content keys for the v7 and v9 test vectors are listed below, individually for each test vector. You may also download CPIX documents with test vector content keys:
 
 * [ContentKeys-v7.xml](ContentKeys/ContentKeys-v7.xml).
+* [v9-MultiFormat.xml](ContentKeys/v9-MultiFormat.xml).
 
 For v8 test vectors, the content keys are not listed in this document for brevity. They can be found in the following CPIX documents:
 
@@ -269,6 +270,24 @@ There is a text track with different debugging timestamps visible:
 * The authoring timestamp is when the sample in question was authored. Filenames and paths reference authoring time.
 * The availability timestamp is when the sample in question should become available to players.
 * The segment timestamp is the availability timestamp of the start of the current segment.
+
+# v9-MultiFormat
+
+This is a Multi-DRM video available as both "cbcs" and "cenc" encryption modes, in both HLS and DASH format, with PlayReady, Widevine and FairPlay DRM (where compatible). The HLS variant also contains the keys embedded in the clear (the encrypted content is playable even without DRM).
+
+There are multiple video quality levels from 288p to 4K in 16:9 aspect ratio. There are four audio tracks. There are no text tracks.
+
+Type | 4K 'cenc' | 4K 'cbcs' | 1080p 'cenc' | 1080p 'cbcs' | 4K clear | 1080p clear
+-----|-----------|-----------|--------------|--------------|----------|------------
+DASH | [Link](https://media.axprod.net/TestVectors/v9-MultiFormat/Encrypted_Cenc/Manifest.mpd) | [Link](https://media.axprod.net/TestVectors/v9-MultiFormat/Encrypted_Cbcs/Manifest.mpd) | [Link](https://media.axprod.net/TestVectors/v9-MultiFormat/Encrypted_Cenc/Manifest_1080p.mpd) | [Link](https://media.axprod.net/TestVectors/v9-MultiFormat/Encrypted_Cbcs/Manifest_1080p.mpd) | [Link](https://media.axprod.net/TestVectors/v9-MultiFormat/Clear/Manifest.mpd) | [Link](https://media.axprod.net/TestVectors/v9-MultiFormat/Clear/Manifest_1080p.mpd)
+HLS | [Link](https://media.axprod.net/TestVectors/v9-MultiFormat/Encrypted_Cenc/Manifest.m3u8) | [Link](https://media.axprod.net/TestVectors/v9-MultiFormat/Encrypted_Cbcs/Manifest.m3u8) | [Link](https://media.axprod.net/TestVectors/v9-MultiFormat/Encrypted_Cenc/Manifest_1080p.m3u8) | [Link](https://media.axprod.net/TestVectors/v9-MultiFormat/Encrypted_Cbcs/Manifest_1080p.m3u8) | [Link](https://media.axprod.net/TestVectors/v9-MultiFormat/Clear/Manifest.m3u8) | [Link](https://media.axprod.net/TestVectors/v9-MultiFormat/Clear/Manifest_1080p.m3u8)
+
+[Download as archive (4.3 GB)](https://media.axprod.net/TestVectors/v9-MultiFormat.7z)
+
+Key ID: `f8c80c25-690f-4736-8132-430e5c6994ce`
+Key: `e8mcsd0GI80LUGUFaleh3Q==`
+
+Value to use for X-AxDRM-Message header: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5X2lkIjoiNjllNTQwODgtZTllMC00NTMwLThjMWEtMWViNmRjZDBkMTRlIiwibWVzc2FnZSI6eyJ0eXBlIjoiZW50aXRsZW1lbnRfbWVzc2FnZSIsImtleXMiOlt7ImlkIjoiZjhjODBjMjUtNjkwZi00NzM2LTgxMzItNDMwZTVjNjk5NGNlIiwiZW5jcnlwdGVkX2tleSI6ImlYcTQ5Wjg5czhkQ2owam0yQTdYelE9PSJ9XSwicGxheXJlYWR5Ijp7Im1pbl9hcHBfc2VjdXJpdHlfbGV2ZWwiOjE1MCwicGxheV9lbmFibGVycyI6WyI3ODY2MjdEOC1DMkE2LTQ0QkUtOEY4OC0wOEFFMjU1QjAxQTciXX19fQ.hRBkpC-9i6nXUmxTPLEfb16MAwh5LhxUZ2b8z1o1e5g`
 
 # Credits
 

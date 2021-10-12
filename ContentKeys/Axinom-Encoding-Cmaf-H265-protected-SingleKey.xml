@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CPIX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:dashif:org:cpix" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:enc="http://www.w3.org/2001/04/xmlenc#" xmlns:pskc="urn:ietf:params:xml:ns:keyprov:pskc">
+	<ContentKeyList>
+		<ContentKey kid="abcc44e5-c122-45ab-ac80-a5b3522a0a31">
+			<Data>
+				<pskc:Secret>
+					<pskc:PlainValue>6SXmCBwEvwP8x1z1kDhL6A==</pskc:PlainValue>
+				</pskc:Secret>
+			</Data>
+		</ContentKey>
+	</ContentKeyList>
+	<ContentKeyUsageRuleList>
+		<ContentKeyUsageRule kid="abcc44e5-c122-45ab-ac80-a5b3522a0a31">
+			<VideoFilter maxPixels="408960"/>
+		</ContentKeyUsageRule>
+		<ContentKeyUsageRule kid="abcc44e5-c122-45ab-ac80-a5b3522a0a31">
+			<AudioFilter/>
+		</ContentKeyUsageRule>
+	</ContentKeyUsageRuleList>
+</CPIX>

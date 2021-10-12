@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CPIX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:dashif:org:cpix" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:enc="http://www.w3.org/2001/04/xmlenc#" xmlns:pskc="urn:ietf:params:xml:ns:keyprov:pskc">
+	<ContentKeyList>
+		<ContentKey kid="426d1a32-78fd-4f22-8730-68db3974dda9">
+			<Data>
+				<pskc:Secret>
+					<pskc:PlainValue>Nr0zWSQdS6b5y6YsHgQeAQ==</pskc:PlainValue>
+				</pskc:Secret>
+			</Data>
+		</ContentKey>
+		<ContentKey kid="9dc8e80a-cbfa-41c3-984f-b6043440391a">
+			<Data>
+				<pskc:Secret>
+					<pskc:PlainValue>SVoDjHndWvQpDwhQQ1gy5Q==</pskc:PlainValue>
+				</pskc:Secret>
+			</Data>
+		</ContentKey>
+		<ContentKey kid="41baa599-6905-4fc0-a8c6-355dcd1ab39f">
+			<Data>
+				<pskc:Secret>
+					<pskc:PlainValue>Au5RYB5s1QaEbeRGjyKtfw==</pskc:PlainValue>
+				</pskc:Secret>
+			</Data>
+		</ContentKey>
+	</ContentKeyList>
+	<ContentKeyUsageRuleList>
+		<ContentKeyUsageRule kid="41baa599-6905-4fc0-a8c6-355dcd1ab39f">
+			<VideoFilter maxPixels="921599"/>
+		</ContentKeyUsageRule>
+		<ContentKeyUsageRule kid="9dc8e80a-cbfa-41c3-984f-b6043440391a">
+			<VideoFilter minPixels="921600" maxPixels="2073600"/>
+		</ContentKeyUsageRule>
+		<ContentKeyUsageRule kid="426d1a32-78fd-4f22-8730-68db3974dda9">
+			<AudioFilter/>
+		</ContentKeyUsageRule>
+	</ContentKeyUsageRuleList>
+</CPIX>

@@ -74,42 +74,17 @@ Key: `e8mcsd0GI80LUGUFaleh3Q==`
 
 Value to use for X-AxDRM-Message header: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5X2lkIjoiNjllNTQwODgtZTllMC00NTMwLThjMWEtMWViNmRjZDBkMTRlIiwibWVzc2FnZSI6eyJ0eXBlIjoiZW50aXRsZW1lbnRfbWVzc2FnZSIsInZlcnNpb24iOjIsImxpY2Vuc2UiOnsiYWxsb3dfcGVyc2lzdGVuY2UiOnRydWV9LCJjb250ZW50X2tleXNfc291cmNlIjp7ImlubGluZSI6W3siaWQiOiJmOGM4MGMyNS02OTBmLTQ3MzYtODEzMi00MzBlNWM2OTk0Y2UiLCJlbmNyeXB0ZWRfa2V5IjoiaVhxNDlaODlzOGRDajBqbTJBN1h6UT09IiwidXNhZ2VfcG9saWN5IjoiUG9saWN5IEEifV19LCJjb250ZW50X2tleV91c2FnZV9wb2xpY2llcyI6W3sibmFtZSI6IlBvbGljeSBBIiwicGxheXJlYWR5Ijp7Im1pbl9kZXZpY2Vfc2VjdXJpdHlfbGV2ZWwiOjE1MCwicGxheV9lbmFibGVycyI6WyI3ODY2MjdEOC1DMkE2LTQ0QkUtOEY4OC0wOEFFMjU1QjAxQTciXX19XX19.k9OlwW0rUwuf5d5Eb0iO98AFR3qp7qKdFzSbg2PQj78`
 
-# Axinom Encoding Test Vectors (October 2021)
+# v10
 
+Added H265 and MPEG-TS (Hls) streams. All streams have 3 variants: Protected using single key, protected using multiple keys and Clear.
 These Multi-DRM videos are produced with Axinom Encoding and they are available with PlayReady, Widevine and FairPlay DRM (where compatible).
 There are multiple video quality levels from 288p to 1080p in 16:9 aspect ratio. There are three audio tracks. There are three text tracks.
 
-Type | H264 SingleKey | H264 MultiKey | H265 SingleKey | H265 MultiKey
------|----------------------|---------------------|----------------------|--------------------
-CMAF | [Link (mpd)](https://media.axprod.net/TestVectors/Cmaf/protected_1080p_h264_cbcs/manifest.mpd) <br> [Link (m3u8)](https://media.axprod.net/TestVectors/Cmaf/protected_1080p_h264_cbcs/manifest.m3u8) | [Link (mpd)](https://media.axprod.net/TestVectors/MultiKey/Cmaf_h264_1080p_cbcs/manifest.mpd) <br> [Link (m3u8)](https://media.axprod.net/TestVectors/MultiKey/Cmaf_h264_1080p_cbcs/manifest.m3u8) | [Link (mpd)](https://media.axprod.net/TestVectors/H265/protected_cmaf_1080p_h265_singlekey/manifest.mpd) <br> [Link (m3u8)](https://media.axprod.net/TestVectors/H265/protected_cmaf_1080p_h265_singlekey/manifest.m3u8) | [Link (mpd)](https://media.axprod.net/TestVectors/H265/protected_cmaf_1080p_h265_multikey/manifest.mpd) <br> [Link (m3u8)](https://media.axprod.net/TestVectors/H265/protected_cmaf_1080p_h265_multikey/manifest.m3u8)
-DASH | [Link](https://media.axprod.net/TestVectors/Dash/protected_dash_1080p_h264_singlekey/manifest.mpd) | [Link](https://media.axprod.net/TestVectors/MultiKey/Dash_h264_1080p_cenc/manifest.mpd) | [Link](https://media.axprod.net/TestVectors/H265/protected_dash_1080p_h265_singlekey/manifest.mpd) | [Link](https://media.axprod.net/TestVectors/H265/protected_dash_1080p_h265_multikey/manifest.mpd)
-HLS | [Link](https://media.axprod.net/TestVectors/Hls/protected_hls_1080p_h264_singlekey/manifest.m3u8) | [Link](https://media.axprod.net/TestVectors/MultiKey/Hls_h264_1080p_cenc/manifest.m3u8) | [Link](https://media.axprod.net/TestVectors/H265/protected_hls_1080p_h265_singlekey/manifest.m3u8) | [Link](https://media.axprod.net/TestVectors/H265/protected_hls_1080p_h265_multikey/manifest.m3u8)
-
-### Content keys
-The content keys for the Axinom Encoding Test Vectors (October 2021) are listed below, individually for each test vector
-* CMAF
- * [H264-SingleKey](ContentKeys/Axinom-Encoding-Cmaf-H264-protected-SingleKey.xml)
- * [H264-MultiKey](ContentKeys/Axinom-Encoding-Cmaf-H264-protected-MultiKey.xml)
- * [H265-SingleKey](ContentKeys/Axinom-Encoding-Cmaf-H265protected-SingleKey.xml)
- * [H265-MultiKey](ContentKeys/Axinom-Encoding-Cmaf-H265-protected-MultiKey.xml)
-* DASH & HLS
- * [H264-SingleKey](ContentKeys/Axinom-Encoding-Dash-Hls-H264-protected-SingleKey.xml)
- * [H264-MultiKey](ContentKeys/Axinom-Encoding-Dash-Hls-H264-protected-MultiKey.xml)
- * [H265-SingleKey](ContentKeys/Axinom-Encoding-Dash-Hls-H265-protected-SingleKey.xml)
- * [H265-MultiKey](ContentKeys/Axinom-Encoding-Dash-Hls-H265-protected-MultiKey.xml)
-
-### X-AxDRM-Message headers
-The message headers for the Axinom Encoding Test Vectors (October 2021) are listed below, individually for each test vector
-* CMAF
- * [H264-SingleKey](X-AxDRM-Message-headers/Axinom-Encoding-Cmaf-H264-protected-SingleKey-X-AxDRM-Message.xml)
- * [H264-MultiKey](X-AxDRM-Message-headers/Axinom-Encoding-Cmaf-H264-protected-MultiKey-X-AxDRM-Message.xml)
- * [H265-SingleKey](X-AxDRM-Message-headers/Axinom-Encoding-Cmaf-H265-protected-SingleKey-X-AxDRM-Message.xml)
- * [H265-MultiKey](X-AxDRM-Message-headers/Axinom-Encoding-Cmaf-H265-protected-MultiKey-X-AxDRM-Message.xml)
-* DASH & HLS
- * [H264-SingleKey](X-AxDRM-Message-headers/Axinom-Encoding-Dash-Hls-H264-protected-SingleKey-X-AxDRM-Message.xml)
- * [H264-MultiKey](X-AxDRM-Message-headers/Axinom-Encoding-Dash-Hls-H264-protected-MultiKey-X-AxDRM-Message.xml)
- * [H265-SingleKey](X-AxDRM-Message-headers/Axinom-Encoding-Dash-Hls-H265-protected-SingleKey-X-AxDRM-Message.xml)
- * [H265-MultiKey](X-AxDRM-Message-headers/Axinom-Encoding-Dash-Hls-H265-protected-MultiKey-X-AxDRM-Message.xml)
+Type | H264 SingleKey | H264 MultiKey | H264 Clear | H265 SingleKey | H265 MultiKey | H264 Clear
+-----|----------------|---------------|------------|----------------|---------------|------------
+CMAF | [Mpd](https://media.axprod.net/TestVectors/Cmaf/protected_1080p_h264_cbcs/manifest.mpd) <br> [M3u8](https://media.axprod.net/TestVectors/Cmaf/protected_1080p_h264_cbcs/manifest.m3u8) <br> [Token & Key](ContentKeys/Axinom-Encoding-Cmaf-H264-protected-SingleKey.txt) | [Mpd](https://media.axprod.net/TestVectors/MultiKey/Cmaf_h264_1080p_cbcs/manifest.mpd) <br> [M3u8](https://media.axprod.net/TestVectors/MultiKey/Cmaf_h264_1080p_cbcs/manifest.m3u8) <br> [Token & Key](ContentKeys/Axinom-Encoding-Cmaf-H264-protected-MultiKey.txt) | [Mpd](https://media.axprod.net/TestVectors/Cmaf/clear_1080p_h264/manifest.mpd) <br> [M3u8](https://media.axprod.net/TestVectors/Cmaf/clear_1080p_h264/manifest.m3u8) | [Mpd](https://media.axprod.net/TestVectors/H265/protected_cmaf_1080p_h265_singlekey/manifest.mpd) <br> [M3u8](https://media.axprod.net/TestVectors/H265/protected_cmaf_1080p_h265_singlekey/manifest.m3u8) <br> [Token & Key](ContentKeys/Axinom-Encoding-Cmaf-H265-protected-SingleKey.txt) | [Mpd](https://media.axprod.net/TestVectors/H265/protected_cmaf_1080p_h265_multikey/manifest.mpd) <br> [M3u8](https://media.axprod.net/TestVectors/H265/protected_cmaf_1080p_h265_multikey/manifest.m3u8) <br> [Token & Key](ContentKeys/Axinom-Encoding-Cmaf-H265-protected-MultiKey.txt) | [Mpd](https://media.axprod.net/TestVectors/H265/clear_cmaf_1080p_h265/manifest.mpd) <br> [m3u8](https://media.axprod.net/TestVectors/H265/clear_cmaf_1080p_h265/manifest.m3u8)
+DASH | [Mpd](https://media.axprod.net/TestVectors/Dash/protected_dash_1080p_h264_singlekey/manifest.mpd) <br> [Token & Key](ContentKeys/Axinom-Encoding-Dash-Hls-H264-protected-SingleKey.txt) | [Mpd](https://media.axprod.net/TestVectors/MultiKey/Dash_h264_1080p_cenc/manifest.mpd) <br> [Token & Key](ContentKeys/Axinom-Encoding-Dash-Hls-H264-protected-MultiKey.txt) | [Mpd](https://media.axprod.net/TestVectors/Dash/not_protected_dash_1080p_h264/manifest.mpd) | [Mpd](https://media.axprod.net/TestVectors/H265/protected_dash_1080p_h265_singlekey/manifest.mpd) <br> [Token & Key](ContentKeys/Axinom-Encoding-Dash-Hls-H265-protected-SingleKey.txt) | [Mpd](https://media.axprod.net/TestVectors/H265/protected_dash_1080p_h265_multikey/manifest.mpd) <br> [Token & Key](ContentKeys/Axinom-Encoding-Dash-Hls-H265-protected-MultieKey.txt) | [Mpd](https://media.axprod.net/TestVectors/H265/clear_dash_1080p_h265/manifest.mpd)
+HLS | [M3u8](https://media.axprod.net/TestVectors/Hls/protected_hls_1080p_h264_singlekey/manifest.m3u8) <br> [Token & Key](ContentKeys/Axinom-Encoding-Dash-Hls-H264-protected-SingleKey.txt) | [M3u8](https://media.axprod.net/TestVectors/MultiKey/Hls_h264_1080p_cenc/manifest.m3u8) <br> [Token & Key](ContentKeys/Axinom-Encoding-Dash-Hls-H264-protected-MultiKey.txt) | [M3u8](https://media.axprod.net/TestVectors/Hls/not_protected_hls_1080p_h264/manifest.m3u8) | [M3u8](https://media.axprod.net/TestVectors/H265/protected_hls_1080p_h265_singlekey/manifest.m3u8) <br> [Token & Key](ContentKeys/Axinom-Encoding-Dash-Hls-H265-protected-SingleKey.txt) | [M3u8](https://media.axprod.net/TestVectors/H265/protected_hls_1080p_h265_multikey/manifest.m3u8) <br> [Token & Key](ContentKeys/Axinom-Encoding-Dash-Hls-H265-protected-MultieKey.txt) | [M3u8](https://media.axprod.net/TestVectors/H265/clear_hls_1080p_h265/manifest.m3u8)
 
 # Credits
 

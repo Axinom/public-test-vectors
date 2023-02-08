@@ -8,7 +8,7 @@ These test vectors aim to conform to the latest industry standards, among these 
 
 * [v6](https://github.com/Axinom/dash-test-vectors/tree/conservative) - a conservative set of test vectors that utilized less modern features for wider compatibility (for the time).
 * [v7 & v8](TestVectors-v7-v8.md) - a set of tests vectors that (for the time) intentionally utilized more advanced features - designed to push the boundaries of implementations and to encourage uptake of modern features.
-* [v9](TestVectors-v9.md) - a set of tests vectors that (for the time) intentionally utilized more advanced features - designed to push the boundaries of implementations and to encourage uptake of modern features.
+* [v9](TestVectors-v9.md) - the last set of test vectors packaged by Axinom in-house packager "Makemedia".
 
 # Quick playback in common players
 

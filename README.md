@@ -25,7 +25,7 @@ The test vectors aim to utilize all the major DRM technologies - Widevine, FairP
 * FairPlay license service URL: https://drm-fairplay-licensing.axtest.net/AcquireLicense
 * PlayReady license service URL: https://drm-playready-licensing.axtest.net/AcquireLicense
 * Widevine license service URL: https://drm-widevine-licensing.axtest.net/AcquireLicense
-* Clear Key license service URL: https://drm-clearkey-testvectors.axtest.net/AcquireLicense
+* Clear Key license service URL: https://clearkey.axtest.net/AcquireLicense
 
 The license server will provide nonpersistent licenses for the relevant keys upon each license request. To receive a PlayReady or Widevine license, you must add the HTTP header `X-AxDRM-Message` to the license request, with the value being a constant unique to each test vector. This HTTP header is not required in order to receive Clear Key licenses.
 
